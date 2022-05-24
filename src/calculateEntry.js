@@ -18,8 +18,7 @@ function calculateEntry(entrants) {
   // seu código aqui
   if (!entrants || Object.keys(entrants).length === 0) return 0;
   const quantidade = countEntrants(entrants);
-  const total = (quantidade.child * 20.99 + quantidade.adult * 49.99 + quantidade.senior * 24.99);
-  return total;
+  return quantidade.child * 20.99 + quantidade.adult * 49.99 + quantidade.senior * 24.99;
 }
 
 module.exports = { calculateEntry, countEntrants };
